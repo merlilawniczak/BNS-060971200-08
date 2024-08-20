@@ -1,0 +1,38 @@
+<footer>
+    <nav>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Nustros datos</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Reclamos</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+    </nav>
+    <span>@ 2024 Onyx Argentina</span>
+</footer>
+
+<style>
+    footer {
+        margin: 10px 0;
+        width: 95%;
+        border-top: 2px solid var(--color-primary);
+        display: grid;
+        grid-template-columns: 1fr;
+		place-items: center;
+
+        & nav {
+            display: flex;
+            gap: 3.125rem;
+            margin: 50px 0 70px 0;
+        }
+
+        & a:hover {
+            transition: .3s;
+            color: var(--color-secundary);
+        }
+
+        & a,
+        span {
+            font-size: 16px;
+            color: var(--color-primary);
+        }
+    }
+</style>
