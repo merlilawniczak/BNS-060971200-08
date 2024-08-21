@@ -4,10 +4,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Preguntas frecuentes">
+<Layout title="Preguntas frecuentes - Onyx">
     <Header />
     <main class="main">
-        <div>
+        <div class="main-content">
             <section>
                 <h2>¿Ofrecen ropa depotiva ecológica?</h2>
                 <p>
@@ -48,7 +48,7 @@ import Footer from "../components/Footer.astro";
                 <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
             </div>
 
-            <div>
+            <div class="container-input">
                 <label>¿Tienes alguna duda? Consultanos</label>
                 <input type="text">
             </div>
@@ -94,7 +94,7 @@ import Footer from "../components/Footer.astro";
             color: var(--color-primary);
         }
 
-        & div {
+        & .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -115,6 +115,24 @@ import Footer from "../components/Footer.astro";
                 & p {
                     font-size: 20px;
                     text-align: center;
+                }
+            }
+
+            & .container-input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .3rem;
+
+                & label {
+                    font-size: 16px;
+                }
+
+                & input {
+                    padding: 5px 10px;
+                    width: 270px;
+                    border: none;
+                    border-radius: 4px;
                 }
             }
         }
