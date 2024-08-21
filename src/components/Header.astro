@@ -1,60 +1,59 @@
 <header class="header">
-    <img src="../public/Logo.png" alt="" />
+  <img class="logo" src="../public/Logo.png" alt="Logo Onyx Sports" />
 
-    <nav>
-        <li>
-            <a href="#">
-                <img
-                    src="../public/User.svg"
-                    alt="Imagen defoult del usuario"
-                />
-                <span>Usuario</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="../public/Cart.svg" alt="Imagen del carrito" />
-                <span>Carrito</span>
-            </a>
-        </li>
-        <li>
-            <img src="../public/hamburger.svg" alt="Imagen de menu" />
-        </li>
-    </nav>
+  <nav>
+    <li>
+      <a href="/login">
+        <img src="../public/User.svg" alt="Imagen defoult del usuario" />
+        <span>Usuario</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="../public/Cart.svg" alt="Imagen del carrito" />
+        <span>Carrito</span>
+      </a>
+    </li>
+    <li>
+      <img src="../public/hamburger.svg" alt="Imagen de menu" />
+    </li>
+  </nav>
 </header>
 
 <style>
-    .header {
-        background: var(--color-primary);
-        width: 100%;
-        height: 12.5rem;
-        padding: 1.25rem 7.1875rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  .header {
+    background: var(--color-primary);
+    width: 100%;
+    height: 9.375rem;
+    padding: 1.25rem 7.1875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-        & nav {
-            display: flex;
-            gap: 2.1875rem;
+  .logo {
+    height: inherit;
+  }
 
-            & li {
-                list-style: none;
-            }
+  nav {
+    display: flex;
+    gap: 2.1875rem;
+  }
+  li {
+    list-style: none;
+  }
 
-            & li:last-child {
-                display: none;
-            }
+  li:last-child {
+    display: none;
+  }
 
-            & a {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-
-                & span {
-                    font-size: 16px;
-                }
-            }
-        }
-    }
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  span {
+    font-size: 16px;
+  }
 </style>

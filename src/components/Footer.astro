@@ -1,38 +1,37 @@
 <footer>
-    <nav>
-        <li><a href="/preguntasFrecuentes">Preguntas frecuentes</a></li>
-        <li><a href="/nuestrosDatos">Nustros datos</a></li>
-        <li><a href="/terminosYCondiciones">Términos y condiciones</a></li>
-        <li><a href="/reclamos">Reclamos</a></li>
-        <li><a href="/politicaPrivacidad">Política de privacidad</a></li>
-    </nav>
-    <span>@ 2024 Onyx Argentina</span>
+  <nav>
+    <li><a href="/preguntasFrecuentes">Preguntas frecuentes</a></li>
+    <li><a href="/nuestrosDatos">Nustros datos</a></li>
+    <li><a href="/terminosYCondiciones">Términos y condiciones</a></li>
+    <li><a href="/reclamos">Reclamos</a></li>
+    <li><a href="/politicaPrivacidad">Política de privacidad</a></li>
+  </nav>
+  <span>@ 2024 Onyx Argentina</span>
 </footer>
 
 <style>
-    footer {
-        margin: 10px 0;
-        width: 95%;
-        border-top: 2px solid var(--color-primary);
-        display: grid;
-        grid-template-columns: 1fr;
-		place-items: center;
+  footer {
+    margin: 10px 0;
+    width: 95%;
+    border-top: 2px solid var(--color-primary);
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  nav {
+    display: flex;
+    gap: 50px;
+    margin: 50px 0 70px 0;
+  }
 
-        & nav {
-            display: flex;
-            gap: 3.125rem;
-            margin: 50px 0 70px 0;
-        }
+  a,
+  span {
+    font-size: 16px;
+    color: var(--color-primary);
+  }
 
-        & a:hover {
-            transition: .3s;
-            color: var(--color-secundary);
-        }
-
-        & a,
-        span {
-            font-size: 16px;
-            color: var(--color-primary);
-        }
-    }
+  a:hover {
+    transition: 0.3s;
+    color: var(--color-secundary);
+  }
 </style>
