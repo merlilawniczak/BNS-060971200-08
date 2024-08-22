@@ -1,7 +1,7 @@
 <footer>
   <nav>
     <li><a href="/ayuda/preguntasFrecuentes">Preguntas frecuentes</a></li>
-    <li><a href="/ayuda/nuestrosDatos">Nustros datos</a></li>
+    <li><a href="/ayuda/nuestrosDatos">Nuestros datos</a></li>
     <li><a href="/ayuda/terminosYCondiciones">Términos y condiciones</a></li>
     <li><a href="/ayuda/reclamos">Reclamos</a></li>
     <li><a href="/ayuda/politicaPrivacidad">Política de privacidad</a></li>
@@ -11,24 +11,37 @@
 
 <style>
   footer {
-    margin: 10px 0;
+    height: fit-content;
     width: 95%;
     border-top: 2px solid var(--color-primary);
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    position: absolute;
+    bottom: 2vh;
   }
+
   nav {
+    height: fit-content;
+    text-align: center;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    margin: 45px 0 50px 0;
+    justify-content: space-around;
+    gap: 2vh 1.5rem;
+    margin: 2vh 0 4vh;
+    align-content: flex-start;
+  }
+
+  li {
+    display: block;
+    height: fit-content;
   }
 
   a,
   span {
-    font-size: 16px;
+    display: block;
+    font-size: 2vh;
     color: var(--color-primary);
   }
 
