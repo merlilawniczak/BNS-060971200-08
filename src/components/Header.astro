@@ -22,7 +22,9 @@
 </script>
 
 <header class="header">
-  <img class="logo" src="../public/Logo.png" alt="Logo Onyx Sports" />
+  <a href="/" class="container-logo">
+    <img class="logo" src="../public/Logo.png" alt="Logo Onyx Sports" />
+  </a>
 
   <nav>
     <li class="user-cart">
@@ -32,7 +34,7 @@
       </a>
     </li>
     <li class="user-cart">
-      <a href="#">
+      <a href="/cart">
         <img src="../public/Cart.svg" alt="Imagen del carrito" />
         <span>Carrito</span>
       </a>
@@ -52,7 +54,7 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="/cart">
         <img src="../public/Cart.svg" alt="Imagen del carrito" />
         <span>Carrito</span>
       </a>
@@ -60,7 +62,6 @@
   </ul>
 </div>
 
-<!-- Capa de overlay para oscurecer el fondo -->
 <div class="overlay"></div>
 
 <style>
@@ -74,8 +75,8 @@
     justify-content: space-between;
   }
 
-  .logo {
-    height: inherit;
+  .container-logo {
+    width: 223px;
   }
 
   nav {
@@ -102,9 +103,17 @@
     display: none;
   }
 
+  .sidebar {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     .header {
-      padding: 1.25rem 2.1875rem;
+      padding: 1.25rem 0.1875rem;
+    }
+
+    .container-logo {
+      width: 9.75rem;
     }
 
     .user-cart {
@@ -119,10 +128,11 @@
 
     /* Estilos para la barra lateral */
     .sidebar {
+      display: block;
       position: fixed;
       top: 0;
       right: -100%;
-      width: 50%;
+      width: 57%;
       height: 100%;
       background-color: #ac142c;
       transition: right 0.5s ease-in-out;
@@ -153,8 +163,8 @@
     }
 
     .sidebar ul li img {
-      width: 4rem;
-      height: 4rem;
+      width: 2rem;
+      height: 2rem;
     }
 
     /* Estilos para el overlay */
