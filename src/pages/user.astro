@@ -6,7 +6,13 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="User - Onyx">
   <Header />
-  <nav></nav>
+  <nav>
+    <a href="/">
+      <img src="/public/Back.svg" alt="Imagen para ir atras" />
+    </a>
+    <h1>User name</h1>
+    <span>Cerrar sesión</span>
+  </nav>
   <main>
     <section>
       <ul>
@@ -51,11 +57,33 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav h1 {
+    font-size: 32px;
+    color: var(--color-primary);
+  }
+
+  nav span {
+    cursor: pointer;
+    color: var(--color-secundary);
+  }
+
+  nav span:hover {
+    text-decoration: underline;
+  }
+
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    min-height: 62vh;
+    min-height: 52vh;
     margin: 1.25rem 2rem;
   }
 
