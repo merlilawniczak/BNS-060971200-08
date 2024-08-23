@@ -45,12 +45,16 @@ import Footer from "../../components/Footer.astro";
             </section>
 
             <div>
-                <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
+                <img
+                    src="../public/ShowMoreIcon.svg"
+                    alt="Flecha que indica hacia abajo"
+                    width="100"
+                />
             </div>
 
             <div class="container-input">
                 <label>¿Tienes alguna duda? Consultanos</label>
-                <input type="text">
+                <input type="text" />
             </div>
         </div>
         <aside>
@@ -90,7 +94,8 @@ import Footer from "../../components/Footer.astro";
         margin-top: 3.125rem;
 
         & h2,
-        p, label {
+        p,
+        label {
             color: var(--color-primary);
         }
 
@@ -122,7 +127,7 @@ import Footer from "../../components/Footer.astro";
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: .3rem;
+                gap: 0.3rem;
 
                 & label {
                     font-size: 16px;
@@ -158,6 +163,12 @@ import Footer from "../../components/Footer.astro";
                     color: var(--color-primary);
                 }
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        aside {
+            display: none;
         }
     }
 </style>
