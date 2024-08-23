@@ -6,12 +6,33 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Onyx Sports - Inicio">
 	<Header />
+	<main>
+		<div class="card">
+			<a href="/product">
+				<div>
+
+				</div>
+			</a>
+		</div>
+	</main>
 	<Footer />
 </Layout>
 
 <style>
-	body {
+	main {
 		display: grid;
 		place-items: center;
+	}
+
+	.card {
+		margin: 3vh;
+		background-color: var(--color-primary);
+		width: 20%;
+		height: 30vh;
+	}
+
+	.card div {
+		width: 100%;
+		height: 100%;
 	}
 </style>
