@@ -4,6 +4,18 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 ---
 
+<script>
+  const showMoreButton = document.querySelector(".btn");
+  const sections = document.querySelectorAll("section");
+
+  showMoreButton.addEventListener("click", () => {
+    sections.forEach((section) => {
+      section.style.display = "block";
+    });
+    showMoreButton.style.display = "none";
+  });
+</script>
+
 <Layout title="Reclamos - Onyx">
   <Header />
   <main class="main">
@@ -55,11 +67,48 @@ import Footer from "../../components/Footer.astro";
           </li>
         </ul>
       </section>
+      <section style="display: none;">
+        <h2>Plazo para presentar un reclamo</h2>
+        <ul>
+          <li>
+            <span style="font-weight: bold">Productos:</span> Tienes un plazo de
+            30 días desde la recepción del producto para presentar un reclamo relacionado
+            con defectos de fabricación, daños durante el envío, o cualquier otra
+            irregularidad.
+          </li>
+          <li>
+            <span style="font-weight: bold">Otros servicios:</span> Para reclamos
+            relacionados con otros servicios ofrecidos por Onyx Sports, como envíos
+            o atención al cliente, te pedimos que presentes tu queja dentro de los
+            15 días posteriores a la fecha en que ocurrió el problema.
+          </li>
+        </ul>
+      </section>
+      <section style="display: none;">
+        <h2>Autoridades competentes</h2>
+        <p>
+          Si no estás satisfecho con la resolución de tu reclamo, tienes derecho
+          a presentar una queja ante las autoridades competentes en materia de
+          defensa del consumidor. Puedes acudir a la Dirección Nacional de
+          Defensa del Consumidor, o a la entidad correspondiente en tu
+          provincia.
+        </p>
+      </section>
+      <section style="display: none;">
+        <h2>Contacto para más información</h2>
+        <p>
+          Si necesitas más información sobre nuestro proceso de reclamos, no
+          dudes en contactarnos a través de los medios mencionados
+          anteriormente. Estamos aquí para garantizar que tu experiencia con
+          Onyx Sports sea siempre positiva.
+        </p>
+      </section>
       <div>
         <img
           src="../public/ShowMoreIcon.svg"
           alt="Flecha que indica hacia abajo"
           width="100"
+          class="btn"
         />
       </div>
     </div>
@@ -84,11 +133,9 @@ import Footer from "../../components/Footer.astro";
     grid-template-columns: 5fr 1fr;
     gap: 5.125rem;
     width: 90%;
-    margin-top: 3.125rem;
 
     & h2,
     p,
-    label,
     li {
       color: var(--color-primary);
     }
@@ -105,11 +152,13 @@ import Footer from "../../components/Footer.astro";
         flex-direction: column;
         align-items: flex-start;
         gap: 1.25rem;
+        margin: 25px;
 
         & h2 {
           font-size: 32px;
           font-weight: bold;
           text-align: center;
+          margin-bottom: 13px;
         }
 
         & p {
@@ -157,6 +206,16 @@ import Footer from "../../components/Footer.astro";
           color: var(--color-primary);
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr;
+    }
+    
+    aside {
+      display: none;
     }
   }
 </style>
