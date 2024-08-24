@@ -1,7 +1,7 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Registro - Onyx">
@@ -37,9 +37,10 @@ import Footer from "../../components/Footer.astro";
 
 <style>
   main {
-    height: 65vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
+    margin: 1.5625rem;
   }
 
   form {
@@ -92,10 +93,6 @@ import Footer from "../../components/Footer.astro";
   }
 
   @media (max-width: 768px) {
-    main {
-      height: 77vh;
-    }
-
     form {
       gap: 1.25rem;
       margin: 0 1rem;
