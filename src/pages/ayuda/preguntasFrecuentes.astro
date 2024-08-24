@@ -4,160 +4,232 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 ---
 
+<script>
+    const showMoreButton = document.querySelector(".btn");
+    const sections = document.querySelectorAll("section");
+  
+    showMoreButton.addEventListener("click", () => {
+      sections.forEach((section) => {
+        section.style.display = "block";
+      });
+      showMoreButton.style.display = "none";
+    });
+</script>
+
 <Layout title="Preguntas frecuentes - Onyx">
-    <Header />
-    <main class="main">
-        <div class="main-content">
-            <section>
-                <h2>¿Ofrecen ropa depotiva ecológica?</h2>
-                <p>
-                    Sí, estamos comprometidos con la sostenibilidad y ofrecemos
-                    una línea de ropa deportiva fabricada con materiales
-                    reciclados y procesos que minimizan el impacto ambiental.
-                </p>
-            </section>
-            <section>
-                <h2>¿Qué marcas de ropa deportiva ofrecen?</h2>
-                <p>
-                    En nuestra tienda ofrecemos una selección de ropa deportiva
-                    de marcas reconocidas como Adidas, Nike, Puma, Reebok, entre
-                    otras.
-                </p>
-            </section>
-            <section>
-                <h2>¿Qué métodos de pago aceptan?</h2>
-                <p>
-                    Aceptamos una variedad de métodos de pago, incluyendo
-                    tarjetas de crédito, débito y transferencias bancarias
-                </p>
-            </section>
-            <section>
-                <h2>
-                    ¿Las prendas que ofrecen son adecuadas para todo tipo de
-                    deportes?
-                </h2>
-                <p>
-                    Sí, ofrecemos una variedad de productos diseñados
-                    específicamente para diferentes deportes. Desde running y
-                    entrenamiento en gimnasio hasta deportes de equipo como
-                    fútbol y baloncesto.
-                </p>
-            </section>
+  <Header />
+  <main class="main">
+    <div class="main-content">
+      <section>
+        <h2>¿Ofrecen ropa depotiva ecológica?</h2>
+        <p>
+          En Onyx Sports, trabajamos para ampliar nuestra oferta de productos
+          ecológicos. Actualmente, contamos con algunas líneas de ropa deportiva
+          hechas con materiales reciclados y sostenibles de marcas como Adidas y
+          Nike.
+        </p>
+      </section>
+      <section>
+        <h2>¿Qué marcas de ropa deportiva ofrecen?</h2>
+        <p>
+          Aceptamos pagos con tarjetas de crédito, débito, transferencias
+          bancarias y a través de plataformas digitales como Mercado Pago.
+          También ofrecemos opciones de pago en cuotas.
+        </p>
+      </section>
+      <section>
+        <h2>¿Qué métodos de pago aceptan?</h2>
+        <p>
+          Aceptamos una variedad de métodos de pago, incluyendo tarjetas de
+          crédito, débito y transferencias bancarias
+        </p>
+      </section>
+      <section>
+        <h2>
+          ¿Las prendas que ofrecen son adecuadas para todo tipo de deportes?
+        </h2>
+        <p>
+          Sí, ofrecemos una variedad de productos diseñados específicamente para
+          diferentes deportes. Desde running y entrenamiento en gimnasio hasta
+          deportes de equipo como fútbol y baloncesto.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Cómo sé qué talla elegir en cada marca?</h2>
+        <p>
+          Cada marca puede tener pequeñas diferencias en sus tallas. Te
+          recomendamos revisar nuestra guía de tallas disponible en la página de
+          cada producto, donde encontrarás instrucciones específicas para cada
+          marca.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Las prendas que venden son originales?</h2>
+        <p>
+          Sí, todos nuestros productos son 100% originales y provienen
+          directamente de las marcas o de distribuidores autorizados.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Puedo devolver o cambiar un producto si no me queda bien?</h2>
+        <p>
+          Sí, puedes realizar cambios o devoluciones dentro de los 30 días
+          posteriores a la compra, siempre que el producto esté en su condición
+          original, con etiquetas y sin haber sido utilizado.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Ofrecen descuentos en productos de marca?</h2>
+        <p>
+          Frecuentemente tenemos promociones y descuentos especiales en
+          productos de marca. Te invitamos a suscribirte a nuestro boletín o
+          seguirnos en redes sociales para estar al tanto de las últimas
+          ofertas.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Cómo cuido mi ropa deportiva de marcas como Nike y Adidas?</h2>
+        <p>
+          Para mantener tu ropa deportiva en las mejores condiciones, te
+          recomendamos seguir las instrucciones de cuidado que se encuentran en
+          la etiqueta de cada prenda. Generalmente, es mejor lavar las prendas
+          en agua fría, evitar el uso de suavizantes y no usar secadora.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Realizan envíos a todo el país?</h2>
+        <p>
+          Sí, realizamos envíos a todo el territorio argentino. Los tiempos de
+          entrega pueden variar según la ubicación, pero generalmente los
+          pedidos llegan en un plazo de 3 a 7 días hábiles.
+        </p>
+      </section>
+      <section style="display:none;">
+        <h2>¿Puedo rastrear mi pedido?</h2>
+        <p>
+          Sí, una vez que tu pedido sea enviado, recibirás un número de
+          seguimiento que te permitirá rastrear el estado de tu envío en todo
+          momento.
+        </p>
+      </section>
 
-            <div>
-                <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
-            </div>
+      <div>
+        <img
+          src="../public/ShowMoreIcon.svg"
+          alt="Flecha que indica hacia abajo"
+          width="100"
+          class="btn"
+        />
+      </div>
 
-            <div class="container-input">
-                <label>¿Tienes alguna duda? Consultanos</label>
-                <input type="text">
-            </div>
-        </div>
-        <aside>
-            <h2>Indice</h2>
-            <ol>
-                <li>¿Ofrecen ropa deportiva ecológica?</li>
-                <li>¿Qué marcas de ropa deportiva ofrecen?</li>
-                <li>¿Qué métodos de pago aceptan?</li>
-                <li>
-                    ¿Las prendas que ofrecen son adecuadas para todo tipo de
-                    deportes?
-                </li>
-                <li>¿Como sé qué talla elegir en cada marca?</li>
-                <li>¿Las prendas que venden son originales?</li>
-                <li>
-                    ¿Puedo devolver o cambiar un producto si no me queda bien?
-                </li>
-                <li>¿Ofrecen descuentos en productos de marca?</li>
-                <li>
-                    ¿Cómo cuido mi ropa deportiva de marcas como Nike y Adidas?
-                </li>
-                <li>¿Realizan envíos a todo el país?</li>
-                <li>¿Puedo rastrear mi pedido?</li>
-            </ol>
-        </aside>
-    </main>
-    <Footer />
+      <div class="container-input">
+        <label>¿Tienes alguna duda? Consultanos</label>
+        <input type="text" />
+      </div>
+    </div>
+
+    <aside>
+      <h2>Indice</h2>
+      <ol>
+        <li>¿Ofrecen ropa deportiva ecológica?</li>
+        <li>¿Qué marcas de ropa deportiva ofrecen?</li>
+        <li>¿Qué métodos de pago aceptan?</li>
+        <li>
+          ¿Las prendas que ofrecen son adecuadas para todo tipo de deportes?
+        </li>
+        <li>¿Como sé qué talla elegir en cada marca?</li>
+        <li>¿Las prendas que venden son originales?</li>
+        <li>¿Puedo devolver o cambiar un producto si no me queda bien?</li>
+        <li>¿Ofrecen descuentos en productos de marca?</li>
+        <li>¿Cómo cuido mi ropa deportiva de marcas como Nike y Adidas?</li>
+        <li>¿Realizan envíos a todo el país?</li>
+        <li>¿Puedo rastrear mi pedido?</li>
+      </ol>
+    </aside>
+  </main>
+  <Footer />
 </Layout>
 
 <style>
-    .main {
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 5fr 1fr;
-        gap: 5.125rem;
-        width: 90%;
-        margin-top: 3.125rem;
+  .main {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 5fr 1fr;
+    gap: 5.125rem;
+    width: 90%;
+    margin-top: 3.125rem;
 
-        & h2,
-        p, label {
-            color: var(--color-primary);
-        }
-
-        & .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4.3125rem;
-
-            section {
-                max-width: 735px;
-                display: flex;
-                flex-direction: column;
-                gap: 1.25rem;
-
-                & h2 {
-                    font-size: 32px;
-                    font-weight: bold;
-                    text-align: center;
-                }
-
-                & p {
-                    font-size: 20px;
-                    text-align: center;
-                }
-            }
-
-            & .container-input {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: .3rem;
-
-                & label {
-                    font-size: 16px;
-                }
-
-                & input {
-                    padding: 5px 10px;
-                    width: 270px;
-                    border: none;
-                    border-radius: 4px;
-                }
-            }
-        }
-
-        & aside {
-            & h2 {
-                font-size: 32px;
-                text-align: center;
-                font-weight: bold;
-                margin-bottom: 13px;
-            }
-
-            & ol {
-                display: flex;
-                flex-direction: column;
-                gap: 13px;
-                min-width: 275px;
-                border: 1px solid var(--color-primary);
-                padding: 11px 5px 5px 1.875rem;
-
-                & li {
-                    font-size: 16px;
-                    color: var(--color-primary);
-                }
-            }
-        }
+    & h2,
+    p,
+    label {
+      color: var(--color-primary);
     }
+
+    & .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4.3125rem;
+
+      section {
+        max-width: 735px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        & h2 {
+          font-size: 32px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        & p {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+
+      & .container-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        margin: 20px 0;
+
+        & label {
+          font-size: 16px;
+        }
+
+        & input {
+          padding: 5px 10px;
+          width: 270px;
+          border: none;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    & aside {
+      & h2 {
+        font-size: 32px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 13px;
+      }
+
+      & ol {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        min-width: 275px;
+        border: 1px solid var(--color-primary);
+        padding: 11px 5px 5px 1.875rem;
+
+        & li {
+          font-size: 16px;
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
 </style>
