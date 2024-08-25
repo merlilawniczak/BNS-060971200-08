@@ -39,6 +39,7 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
+          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -74,5 +75,3 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: Build and push Docker images
         uses: docker/build-push-action@v6.7.0
-      - name: Get Package Manager
-        uses: wow-actions/get-package-manager@v1.0.0
