@@ -1,8 +1,8 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/merlilawniczak/BNS-060971200-08.git
-	branch = backend-only
+	branch = main
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/merlilawniczak/BNS-060971200-08.git
-	branch = frontend-only
+	branch = main
