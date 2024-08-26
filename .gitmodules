@@ -1,7 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/migatolive/os-backend.git
-	branch = main
 
 [submodule "frontend"]
 	path = frontend
